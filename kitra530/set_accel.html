@@ -1,0 +1,129 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Set Accel', {
+
+        category: 'Kitra530',
+        color: '#83d3e2',
+
+        defaults: {
+
+            name: {
+                value: ""
+            },
+            odr: {
+                value: "26",
+                required: true
+            },
+            tap: {
+                value: 0,
+                required: true
+            },
+            dtap: {
+                value: 0,
+                required: true
+            },
+            tilt: {
+                value: 0,
+                required: true
+            },
+            pedometer: {
+                value: 0,
+                required: true
+            },
+            wakeup: {
+                value: 0,
+                required: true
+            },
+            freefall: {
+                value: 0,
+                required: true
+            },
+        },
+
+        inputs: 1,
+
+        outputs: 1,
+        icon: "icons/kitra.png",
+
+        label: function() {
+
+            return this.name || "Set Accel";
+
+        }
+
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="Set Accel">
+
+    <div class="form-row">
+
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+
+        <input type="text" id="node-input-name" placeholder="Name">
+
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-odr"><i class="fa fa-bell"></i> Sample Rate </label>
+        <select type="text" id="node-input-odr">
+		  <option value="13">13</option>
+		  <option value="26">26</option>
+                  <option value="52">52</option>
+		  <option value="104">104</option>
+		  <option value="208">208</option>
+		  <option value="416">416</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-tap"><i class="fa fa-bell"></i> Tap </label>
+        <select type="text" id="node-input-tap">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-dtap"><i class="fa fa-bell"></i> Double tap </label>
+        <select type="text" id="node-input-dtap">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-tilt"><i class="fa fa-bell"></i> Tilt </label>
+        <select type="text" id="node-input-tilt">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-pedometer"><i class="fa fa-bell"></i> Pedometer </label>
+        <select type="text" id="node-input-pedometer">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-wakeup"><i class="fa fa-bell"></i> Wakeup </label>
+        <select type="text" id="node-input-wakeup">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-freefall"><i class="fa fa-bell"></i> Freefall </label>
+        <select type="text" id="node-input-freefall">
+		  <option value=0>Off</option>
+		  <option value=1>On</option>
+		</select>
+    </div>
+</script>
+
+
+
+<script type="text/x-red" data-help-name="Set Accel">
+
+    <p>Select odr and events to receive with 'get event' node</p>
+
+</script>

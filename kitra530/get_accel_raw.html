@@ -1,0 +1,49 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Get Accel Raw', {
+
+        category: 'Kitra530',
+        color: '#83d3e2',
+
+        defaults: {
+
+            name: {
+                value: ""
+            },
+
+        },
+
+        inputs: 1,
+
+        outputs: 1,
+        icon: "icons/kitra.png",
+
+        label: function() {
+
+            return this.name || "Get Accel Raw";
+
+        }
+
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="Get Accel Raw">
+
+    <div class="form-row">
+
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+
+        <input type="text" id="node-input-name" placeholder="Name">
+
+    </div>
+
+</script>
+
+
+
+<script type="text/x-red" data-help-name="Get Accel Raw">
+
+    <p>Receive data on the 3 outputs corrsponding to x y and z. Data is in <code>msg.accel_<v>_raw</code></p>
+
+</script>

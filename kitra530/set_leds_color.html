@@ -1,0 +1,47 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Set Leds Color', {
+        category: 'Kitra530',
+        color: '#83d3e2',
+        defaults: {
+            name: {
+                value: ""
+            },
+            color: {
+                value: "0xFF0000",
+                required: false
+            },
+            intensity: {
+                value: 50,
+                required: false
+            }
+        },
+        inputs: 1,
+        icon: "icons/kitra.png",
+        label: function() {
+            return this.name || "Set Leds Color";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Set Leds Color">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-color"><i class="fa fa-tag"></i> Color </label>
+        <input type="text" id="node-input-color">
+    </div>
+    <div class="form-row">
+        <label for="node-input-intensity"><i class="fa fa-lightbulb-o"></i> Intensity(%) </label>
+        <input type="text" id="node-input-intensity">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Set Leds Color">
+    <p>Change the state of rgb leds.</p>
+    <ul>
+        <li>Color: hex color to be used. If no value is provided <code>msg.color</code> will be used.</li>
+        <li>Intensity: Led intensity from 0 to 100. If no value is provided, <code>msg.intensity</code> will be used.</li>
+    </ul>
+</script>

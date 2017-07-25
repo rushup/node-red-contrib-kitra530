@@ -1,0 +1,22 @@
+{
+    "name": "node-red-contrib-kitra530",
+    "version": "0.1",
+    "description": "kitra530 node-red module",
+    "dependencies": {},
+    "keywords": [
+        "node-red",
+        "kitra530",
+        "artik530",
+        "rushup"
+    ],
+    "node-red": {
+        "nodes": {
+            "get_proximity": "kitra530/get_proximity.js",
+            "set_proximity": "kitra530/set_proximity.js",
+            "led_rgb_set": "kitra530/set_leds_color.js",
+            "get_accel_raw": "kitra530/get_accel_raw.js",
+            "get_accel_event": "kitra530/get_accel_event.js",
+            "set_accel": "kitra530/set_accel.js"
+        }
+    }
+}

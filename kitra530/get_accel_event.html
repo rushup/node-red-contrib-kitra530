@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Get Accel Event', {
+
+        category: 'Kitra530',
+        color: '#83d3e2',
+
+        defaults: {
+
+            name: {
+                value: ""
+            },
+
+        },
+
+        inputs: 0,
+
+        outputs: 6,
+        icon: "icons/kitra.png",
+
+        label: function() {
+
+            return this.name || "Get Accel Event";
+
+        }
+
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="Get Accel Event">
+
+    <div class="form-row">
+
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+
+        <input type="text" id="node-input-name" placeholder="Name">
+
+    </div>
+
+</script>
+
+
+
+<script type="text/x-red" data-help-name="Get Accel Event">
+
+    <p>Event must be enabled with 'Set Accel' node. Event are redirected to the following outputs:</p>
+    <p>
+        1)Tap<br> 2)Double tap<br> 3)Tilt
+        <br> 4)Freefall
+        <br> 5)Step
+        <br> 6)Wakeup
+        <br>
+    </p>
+    <p>A <code>msg.event_extra</code> field is provided for additional infos like step counter.</p>
+    <p><code>msg.event_timestamp_ns</code> contains a timestamp in nanoseconds.</p>
+</script>

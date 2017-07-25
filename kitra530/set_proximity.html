@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Set Proximity', {
+
+        category: 'Kitra530',
+        color: '#83d3e2',
+
+        defaults: {
+
+            name: {
+                value: ""
+            },
+            range: {
+                value: "accuracy",
+                required: true
+            },
+
+        },
+
+        inputs: 1,
+
+        outputs: 1,
+        icon: "icons/kitra.png",
+
+        label: function() {
+
+            return this.name || "Set Proximity";
+
+        }
+
+    });
+</script>
+
+
+
+<script type="text/x-red" data-template-name="Set Proximity">
+
+    <div class="form-row">
+
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+
+        <input type="text" id="node-input-name" placeholder="Name">
+
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-range"><i class="fa fa-bell"></i> Range type </label>
+        <select type="text" id="node-input-range">
+		  <option value="long">Long</option>
+		  <option value="speed">Speed</option>
+                  <option value="accuracy">Accuracy</option>
+		</select>
+    </div>
+</script>
+
+
+
+<script type="text/x-red" data-help-name="Set Proximity">
+
+    <p>Select proximity range type. msg.payload is filled with 'ok' or 'fail' depending on the result.</p>
+
+</script>
