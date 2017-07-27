@@ -57,7 +57,7 @@ module.exports = function(RED) {
 
                     fs.writeFileSync(devpath + "/in_proximity_set_range", config.range);
 
-                    msg.payload = "ok";
+                    msg.proximity_error = "ok";
 
                 } catch (err) {
                     node.status({
@@ -66,7 +66,7 @@ module.exports = function(RED) {
                         text: "Error set"
                     });
 
-                    msg.payload = "fail";
+                    msg.proximity_error = "fail";
                 }
 
                 node.send(msg);
